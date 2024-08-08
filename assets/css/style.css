@@ -679,7 +679,11 @@ section.pricing-section::before {
 
 /* media-query */
 
-@media (max-width: 1220px) {
+@media (max-width: 1110px) {
+  header::after {
+    height: 300px;
+  }
+
   .container {
     padding: 0 20px;
   }
@@ -694,9 +698,8 @@ section.pricing-section::before {
     background: linear-gradient(rgba(121, 34, 216, 1), rgba(54, 54, 178, 1));
     box-shadow: 0px 0px 2px magenta;
     gap: 20px;
-    right: 34px;
-    min-width: 200px;
-    top: 20px;
+    right: 28px;
+    top: 53px;
   }
 
   .main-navigation .menu-navigation ul {
@@ -718,10 +721,6 @@ section.pricing-section::before {
 
   .main-navigation .menu-navigation.show {
     display: flex;
-  }
-
-  header::after {
-    bottom: -2px;
   }
 
   .banner-container--right__img {
