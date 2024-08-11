@@ -735,16 +735,21 @@ section.pricing-section::before {
   .banner-container {
     flex-direction: column;
     align-items: center;
+    padding: 0px 0 41px;
   }
 
   .collaborate-sectiont .collaborate-team {
     flex-direction: column-reverse;
     align-items: center;
+    gap: 20px;
+    padding-top: 50px;
   }
 
   .remote-team-section .remote-team {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+    margin-top: 50px;
   }
 
   .download-container .download-container--description {
@@ -754,6 +759,7 @@ section.pricing-section::before {
   .download-container .download-container--steps {
     flex-direction: column;
     align-items: center;
+    gap: 50px;
   }
   .download-container--steps::before {
     display: none;
@@ -783,6 +789,18 @@ section.pricing-section::before {
   }
 }
 
+@media (max-width: 768px) {
+  .price-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.features-section {
+    margin-top: -200px;
+    padding-top: 200px;
+  }
+}
+
 @media (max-width: 480px) {
   .main-navigation {
     padding-top: 20px;
@@ -807,11 +825,6 @@ section.pricing-section::before {
 
   .testimonial-wrapper .testimonial {
     flex-direction: column;
-  }
-
-  .price-row {
-    flex-direction: column;
-    align-items: center;
   }
 
   section.pricing-section::before {
