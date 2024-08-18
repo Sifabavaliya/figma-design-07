@@ -1,4 +1,11 @@
 // Handle toggle menu click.
-document.getElementById('menu-toggle').addEventListener('click', function () {
-    document.getElementById('main-menu').classList.toggle('show');
-});
+
+function showMenu(){
+    const mainMenu=document.querySelector('#main-menu');
+    mainMenu.style.display='flex';
+}
+
+function closeMenu(){
+    const mainMenu=document.querySelector('#main-menu');
+    mainMenu.style.display='none';
+}

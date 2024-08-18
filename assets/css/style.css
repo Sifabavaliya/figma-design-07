@@ -41,7 +41,7 @@ body {
 }
 
 img {
-  /* max-width: 100%; */
+  max-width: 100%;
   height: auto;
 }
 
@@ -330,8 +330,6 @@ header::after {
 
 .video-img img {
   position: relative;
-  max-width: 100%;
-  height: auto;
 }
 
 .video-img::before {
@@ -368,13 +366,6 @@ section.features-section::after {
   position: relative;
 }
 
-.features-container::after {
-  content: "";
-  background: url(../images/Line.png), no-repeat, center bottom;
-  position: absolute;
-  bottom: 0;
-}
-
 .feature-container--description {
   text-align: center;
 }
@@ -400,6 +391,7 @@ section.features-section::after {
 
 .features-wrapper .feature .feature-img img {
   margin-top: 8px;
+  width: 100px;
 }
 
 .features-wrapper .feature .feature-description h4 {
@@ -409,6 +401,17 @@ section.features-section::after {
 
 .features-wrapper .feature .feature-description p {
   color: white;
+}
+
+.features-container::after {
+  content: "";
+  background-image: url(../images/Line.png);
+  height: 3px;
+  width: 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0px;
 }
 
 /* End of feature section */
@@ -461,17 +464,21 @@ section.testimonial-section {
   letter-spacing: -0.5px;
 }
 
+.testimonial img {
+  max-width: 220px;
+}
+
 .testimonial-wrapper .testimonial h6 {
   color: rgba(22, 28, 45, 1);
   font-size: 17px;
   margin: 0;
 }
 
-.testimonial-wrapper .testimonial2 {
+.testimonial-wrapper .testimonial:nth-child(2) {
   opacity: 0.7;
 }
 
-.testimonial-wrapper .testimonial3 {
+.testimonial-wrapper .testimonial:nth-child(3) {
   opacity: 0.5;
 }
 
@@ -482,7 +489,6 @@ section.testimonial-section {
   gap: 10px;
   color: var(--step-color2);
   text-decoration: none;
-  /* font-size: 17px; */
   font-family: "gilroy-bold";
 }
 
@@ -538,6 +544,7 @@ section.pricing-section::before {
   display: flex;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .price-row .price-col {
@@ -606,6 +613,7 @@ section.pricing-section::before {
   justify-content: space-around;
   gap: 190px;
   padding: 88px 0px;
+  flex-wrap: wrap;
 }
 
 .links-container .left-links {
@@ -687,6 +695,10 @@ section.pricing-section::before {
   .container {
     padding: 0 20px;
   }
+
+  .banner-container {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 991px) {
@@ -699,7 +711,7 @@ section.pricing-section::before {
     box-shadow: 0px 0px 2px magenta;
     gap: 20px;
     right: 28px;
-    top: 53px;
+    top: 13px;
   }
 
   .main-navigation .menu-navigation ul {
@@ -719,17 +731,16 @@ section.pricing-section::before {
     display: block;
   }
 
-  .main-navigation .menu-navigation.show {
-    display: flex;
+  .close svg {
+    width: 30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    fill: white;
   }
 
   .banner-container--right__img {
     top: 55px;
-  }
-
-  .banner-container--right__img img {
-    max-width: 100%;
-    height: auto;
   }
 
   .banner-container {
@@ -749,7 +760,11 @@ section.pricing-section::before {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    margin-top: 50px;
+    margin-top: 0px;
+  }
+
+  .download-container {
+    padding: 30px;
   }
 
   .download-container .download-container--description {
@@ -760,6 +775,7 @@ section.pricing-section::before {
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    margin-top: 40px;
   }
   .download-container--steps::before {
     display: none;
@@ -774,13 +790,15 @@ section.pricing-section::before {
     padding-top: 280px;
   }
 
-  section.pricing-section::before {
-    bottom: -57px;
+  .testimonial-container {
+    padding: 40px 0;
   }
 
   footer .links-container {
     flex-direction: column;
     align-items: center;
+    gap: 30px;
+    padding: 30px 0;
   }
 
   footer .footer-description {
@@ -790,14 +808,13 @@ section.pricing-section::before {
 }
 
 @media (max-width: 768px) {
-  .price-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
   section.features-section {
     margin-top: -200px;
     padding-top: 200px;
+  }
+
+  .pricing-container {
+    padding: 109px 0 172px;
   }
 }
 
@@ -806,16 +823,6 @@ section.pricing-section::before {
     padding-top: 20px;
     align-items: center;
     gap: 20px;
-  }
-
-  .collaborate-left--img img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .remote-team--right__img img {
-    max-width: 100%;
-    height: auto;
   }
 
   section.features-section {
