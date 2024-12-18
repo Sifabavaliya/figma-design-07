@@ -33,9 +33,13 @@ document.getElementById("dow-btn").addEventListener("click", (e) => {
     isValid = false;
   } else {
     document.getElementById("error").innerHTML = "";
-    const link = document.createElement("a");
-    link.href = "assets/pdf/mypdf.pdf"; // Change this to your PDF path
-    link.download = "mypdf.pdf"; // Set the default file name
-    link.click(); // Trigger the download
+    window.open("assets/pdf/mypdf.pdf");
+    document.getElementById("popup").classList.remove("show");
+    document.getElementById("popup-modal").classList.add("show");
   }
+});
+
+document.getElementById("close").addEventListener("click", (e) => {
+  document.getElementById("popup-modal").classList.remove("show");
+  document.body.classList.remove("popup-open");
 });
