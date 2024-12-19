@@ -713,6 +713,7 @@ body.popup-open {
   gap: 17px;
   background-color: white;
   overflow-x: hidden;
+  min-height: 100%;
 }
 
 .popup-left {
